@@ -1,0 +1,153 @@
+:root {
+  --body-bg-color: #e5ecef;
+  --theme-bg-color: #fafafb;
+  --body-font: "Poppins", sans-serif;
+  --body-color: #2f2f33;
+  --active-color: #0162ff;
+  --active-light-color: #e1ebfb;
+  --header-bg-color: #fff;
+  --search-border-color: #efefef;
+  --border-color: #d8d8d8;
+  --alert-bg-color: #e8f2ff;
+  --subtitle-color: #83838e;
+  --inactive-color: #f0f0f0;
+  --placeholder-color: #9b9ba5;
+  --time-button: #fc5757;
+  --level-button: #5052d5;
+  --button-color: #fff;
+}
+
+.dark-mode {
+  --body-bg-color: #1d1d1d;
+  --theme-bg-color: #13131a;
+  --header-bg-color: #1c1c24;
+  --alert-bg-color: #292932;
+  --body-color: #fff;
+  --inactive-color: #292932;
+  --time-button: #fff;
+  --level-button: #fff;
+  --active-light-color: #263d63;
+  --border-color: #26262f;
+  --search-border-color: #26262f;
+}
+
+::-moz-placeholder {
+  color: var(--placeholder-color);
+}
+
+:-ms-input-placeholder {
+  color: var(--placeholder-color);
+}
+
+::placeholder {
+  color: var(--placeholder-color);
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--body-bg-color);
+  font-family: var(--body-font);
+  font-size: 15px;
+  color: var(--body-color);
+}
+
+.dark-light svg {
+  margin-right: 8px;
+  width: 22px;
+  cursor: pointer;
+  fill: transparent;
+  transition: 0.5s;
+}
+
+.dark-mode .dark-light svg {
+  fill: #ffce45;
+  stroke: #ffce45;
+}
+
+.dark-mode .job-card svg {
+  box-shadow: none;
+}
+
+.dark-mode .search.item {
+  color: var(--body-color);
+  border-color: var(--body-color);
+}
+
+.dark-mode .search-location svg,
+.dark-mode .search-job svg,
+.dark-mode .search-salary svg {
+  color: var(--body-color);
+}
+
+.dark-mode .detail-button {
+  background-color: var(--inactive-color);
+  color: var(--subtitle-color);
+}
+
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+  font-weight: 600;
+}
+
+.logo svg {
+  width: 24px;
+  margin-right: 12px;
+}
+
+.header-menu {
+  display: flex;
+  gap: 1rem;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.header-menu a {
+  text-decoration: none;
+  color: var(--body-color);
+  font-weight: 500;
+  display: inline-block;
+}
+
+.header-menu a:hover {
+  color: var(--active-color);
+}
+
+.header-menu a:not(:first-child) {
+  margin-left: 30px;
+}
+
+.header-menu a.active {
+  color: var(--active-color);
+}
+
+.user-settings{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
+    font-weight: 500;
+}
+
+.user-settings .user-profile {
+    width: 40px;
+    border-radius: 50%;
+  }
