@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
       const page = response.data
       const $ = cheerio.load(page)
 
-   $('.job-search-card').each((index, element) => {
+      $('.job-search-card').each((index, element) => {
         // console.log($(element).find(".job-search-card__listdate").text() )
         const company = ($(element).find(".base-search-card__subtitle").text()).trim()
         const tiltle = ($(element).find(".base-search-card__title").text()).trim()
@@ -23,12 +23,12 @@ app.get('/', (req, res) => {
         const salary = ($(element).find(".job-search-card__salary-info").text()).trim()
         const time = ($(element).find(".job-search-card__listdate").text()).trim()
 
-        searchCards[index] = {company, tiltle, location, salary, time}
+        searchCards[index] = { company, tiltle, location, salary, time }
       })
-   
-      res.json(searchCards)
 
-    }).catch((err)=> console.log(err))
+      res.sendFile(__dirname + "/index.html")
+
+    }).catch((err) => console.log(err))
 
 })
 
